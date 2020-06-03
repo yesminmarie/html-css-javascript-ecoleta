@@ -1,0 +1,108 @@
+#page-home {
+    height: 100vh; /*pega a altura da viewport e divide em 100 blocos, a imagem vai ocupar os 100 blocos*/
+    background: url('../assets/home-background.svg') no-repeat;
+    background-position: 35vw bottom; /* a imagem vai ser colocada na posição 35 da viewport e ficará "grudada" embaixo*/
+}
+
+#page-home .content {
+    width: 90%; /* ocupa 90% da largura da tela*/
+    max-width: 1100px; /*largura máxima de 1100px*/
+    margin: 0 auto; /* não terá margem nem cima nem embaixo, as laterais terão margem automática */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-home header {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#page-home header a {
+    display: flex; /*os elementos ficarão um ao lado do outro*/
+
+    color: var(--title-color);
+    font-weight: 700;
+}
+
+#page-home header a span {
+    margin-right: 16px;
+    /* display inline não funciona para exibir a imagem, então inseriu-se o display flex, mas o display flex neste elemento perdeu a característica de ser inline,
+    então o "a" deve ter display flex também (verificar: #page-home header a) */
+    display: flex;
+    background-image: url('../assets/log-in.svg');
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main {
+    max-width: 560px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#page-home main h1 {
+    font-size: 54px;
+}
+
+#page-home main p {
+    font-size: 24px;
+    line-height: 38px;
+    margin-top: 24px;
+}
+
+#page-home main a {
+    width: 100%;
+    max-width: 360px;
+    height: 72px;
+
+    border-radius: 8px;
+
+    display: flex;
+    align-items: center;
+
+    margin-top: 40px;
+
+    background-color: var(--primary-color);
+
+    transition: 400ms;
+
+    color: white;
+}
+
+#page-home main a:hover {
+    background-color: #2fb86e;
+}
+
+#page-home main a span {
+    width: 72px;
+    height: 72px;
+
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    background-color: rgba(0, 0, 0, 0.08); /* preto com alpha 0.08 */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*cria um pseudo elemento após o span*/
+#page-home main a span::after {
+    content: "";
+    background-image: url('../assets/search.svg');
+
+    width: 20px;
+    height: 20px;
+}
+
+#page-home main a strong {
+    flex: 1;
+    color: white;
+    text-align: center;
+}
+
