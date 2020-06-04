@@ -33,7 +33,7 @@ function getCities(event) {
     .then( res => res.json())
     .then(cities => {
         for (const city of cities){
-            citySelect.innerHTML += `<option value="${city.id}">${city.nome}</option>`
+            citySelect.innerHTML += `<option value="${city.nome}">${city.nome}</option>`
         }
 
         citySelect.disabled = false; //após preencher o select das cidades com os nomes de todas as cidades, o campo fica habilitado novamente
@@ -44,3 +44,35 @@ function getCities(event) {
 document
     .querySelector("select[name=uf")
     .addEventListener("change", getCities)
+
+
+//items de coleta
+//pegar todos os li's
+const itemsCollect = document.querySelectorAll(".items-grid li")
+
+for(const item of itemsCollect){
+    item.addEventListener("click", handleSelectedItem)
+}
+
+let selectedItems = [1]
+
+function handleSelectedItem(event) {
+    const itemLi = event.target
+
+    //toggle -> se existir a classe "selected" ela será removida, senão ela será adicionada
+    itemLi.classList.toggle("selected")
+
+    const itemId = itemLi.dataset.id
+
+    //verificar se existem items selecionados, se sim pegar os itens selecionados
+
+    const alreadySelected
+
+    //se já estiver selecionado, tirar da seleção
+
+    //se não estiver selecionado, adicionar à seleção
+
+    //atualizar o campo escondido com os tens selecionados
+
+}
+
