@@ -1,4 +1,4 @@
-# html-css-javascript-ecoleta
+# Ecoleta
 Projeto Desenvolvido na semana Next Level Week (Starter) com o instrutor Mayk Brito.
 
 # Foram utilizadas as seguintes tecnologias:
