@@ -55,10 +55,20 @@ form fieldset {
 
 form legend {
     margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
 }
 
 form legend h2 {
     font-size: 24px;
+}
+
+form legend span {
+    font-size: 14px;
+    color: var(--title-color);
 }
 
 form .field {
@@ -101,7 +111,7 @@ form label {
 }
 
 /* pega o field que vem seguido de um field*/
-/*form .field-group, .field -> 1º field
+/*form .field-group .field -> 1º field
 .field -> 2º field (o estilo será aplicado nesta classe)
 */
 form .field-group .field + .field {
