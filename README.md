@@ -4,7 +4,7 @@ Projeto Desenvolvido na semana Next Level Week (Starter) com o instrutor Mayk Br
 # Foram utilizadas as seguintes tecnologias:
 - HTML
 - CSS
-- JvaScript
+- JavaScript
 - Node.js
 - Express
 - SQLite
